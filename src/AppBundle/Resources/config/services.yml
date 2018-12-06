@@ -11,8 +11,9 @@ services:
     class: AppBundle\Service\CustomerAccount
     arguments: ['@Doctrine\ORM\EntityManagerInterface']
 
-  app.service_deposit_expenditure_chain.chain_builder:
-    class: AppBundle\Service\DepositExpenditureChain\ChainBuilder
+  app.service_deposit_calculate_expenditure_chain.chain_builder:
+    class: AppBundle\Service\DepositCalculateExpenditureChain\ChainBuilder
+    arguments: ['@AppBundle\Service\DepositCalculateExpenditureChain\RuleAmount_0_1000', '@AppBundle\Service\DepositCalculateExpenditureChain\RuleAmount_1000_10000', '@AppBundle\Service\DepositCalculateExpenditureChain\RuleAmount_10000']
 
 
 

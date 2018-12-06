@@ -23,14 +23,14 @@ class ChainBuilder implements DepositExpenditureChainBuilder
 
     /**
      * ChainBuilder constructor.
-     * @param AbstractRule $ruleAmount_0_1000
-     * @param AbstractRule $ruleAmount_1000_10000
-     * @param AbstractRule $ruleAmount10000
+     * @param RuleAmount_0_1000 $ruleAmount_0_1000
+     * @param RuleAmount_1000_10000 $ruleAmount_1000_10000
+     * @param RuleAmount_10000 $ruleAmount10000
      */
     public function __construct(
-        AbstractRule $ruleAmount_0_1000,
-        AbstractRule $ruleAmount_1000_10000,
-        AbstractRule $ruleAmount10000
+        RuleAmount_0_1000 $ruleAmount_0_1000,
+        RuleAmount_1000_10000 $ruleAmount_1000_10000,
+        RuleAmount_10000 $ruleAmount10000
     )
     {
         $this->ruleAmount_0_1000 = $ruleAmount_0_1000;
