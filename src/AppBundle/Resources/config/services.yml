@@ -1,0 +1,18 @@
+services:
+  app.service.deposit_accrual_operation:
+    class: AppBundle\Service\DepositAccrualOperation
+    arguments: ['@Doctrine\ORM\EntityManagerInterface', '@AppBundle\Service\CustomerAccount']
+
+  app.service.deposit_expenditure_operation:
+    class: AppBundle\Service\DepositExpenditureOperation
+    arguments: ['@Doctrine\ORM\EntityManagerInterface', '@AppBundle\Service\CustomerAccount', '@AppBundle\Service\DepositCalculateExpenditureChain\ChainBuilder']
+
+  app.service.customer_account:
+    class: AppBundle\Service\CustomerAccount
+    arguments: ['@Doctrine\ORM\EntityManagerInterface']
+
+  app.service_deposit_expenditure_chain.chain_builder:
+    class: AppBundle\Service\DepositExpenditureChain\ChainBuilder
+
+
+

@@ -1,0 +1,20 @@
+services:
+    app.customer_repository:
+        class: AppBundle\Repository\CustomerRepository
+        factory: ['@doctrine', getRepository]
+        arguments: [ AppBundle\Entity\Customer ]
+
+    app.customer_deposit_operation_repository:
+        class: AppBundle\Repository\CustomerDepositOperationRepository
+        factory: ['@doctrine', getRepository]
+        arguments: [ AppBundle\Entity\CustomerDepositeOperation ]
+
+    app.customer_deposit_repository:
+        class: AppBundle\Repository\CustomerDepositRepository
+        factory: ['@doctrine', getRepository]
+        arguments: [ AppBundle\Entity\CustomerDeposit ]
+
+    app.customer_account_repository:
+        class: AppBundle\Repository\CustomerAccountRepository
+        factory: ['@doctrine', getRepository]
+        arguments: [ AppBundle\Entity\CustomerAccount]
